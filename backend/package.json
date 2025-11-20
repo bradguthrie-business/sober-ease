@@ -1,0 +1,16 @@
+{
+  "name": "@sober-ease/backend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "echo \"Deploy to AWS Lambda\""
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1691.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.1"
+  }
+}
