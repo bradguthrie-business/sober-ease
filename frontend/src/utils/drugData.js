@@ -30,7 +30,10 @@ export const opioids = [
   { name: "Tramadol", danger: danger.MODERATE },
   { name: "Codeine", danger: danger.MODERATE },
   { name: "Buprenorphine", danger: danger.MODERATE },
-  { name: "Kratom (7-Hydroxymitragynine/7-OH)", danger: danger.MODERATE },
+  { name: "Kratom (MGM-16)", danger: danger.EXTREME },
+  { name: "Kratom (MGM-15)", danger: danger.HIGH },
+  { name: "Kratom (7-Hydroxymitragynine/7-OH)", danger: danger.HIGH },
+  { name: "Kratom (Mitragynine pseudoindoxyl)", danger: danger.HIGH },
   { name: "Kratom (Mitragynine)", danger: danger.MODERATE },
   { name: "Kratom", danger: danger.LOW },
 ];

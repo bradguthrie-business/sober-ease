@@ -1,6 +1,7 @@
 // AWS Lambda handler placeholder
-// This will be your main API endpoint handler
+// this will be the main API endpoint handler
 
+// eslint-disable-next-line no-unused-vars
 export const handler = async (event) => {
   const response = {
     statusCode: 200,
@@ -9,7 +10,7 @@ export const handler = async (event) => {
       "Access-Control-Allow-Origin": "*",
     },
     body: JSON.stringify({
-      message: "SoberEase API - Coming Soon",
+      message: "API - Coming Soon",
     }),
   };
 

@@ -1,17 +1,17 @@
+import { AlertCircle, AlertTriangle, CheckCircle, Info } from "lucide-react";
 import { Link } from "react-router-dom";
-import { AlertTriangle, AlertCircle, Info, CheckCircle } from "lucide-react";
+import PageHeader from "../components/PageHeader";
 import {
   alcohol,
-  opioids,
   benzodiazepines,
-  stimulants,
-  psychedelics,
-  dissociatives,
   cannabis,
   depressants,
+  dissociatives,
   inhalants,
+  opioids,
+  psychedelics,
+  stimulants,
 } from "../utils/drugData";
-import PageHeader from "../components/PageHeader";
 import "./DrugLibrary.scss";
 
 const DangerIcon = ({ level }) => {

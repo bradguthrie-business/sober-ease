@@ -12,10 +12,26 @@
     "dev:frontend": "npm run dev --workspace=frontend",
     "build": "npm run build --workspace=frontend",
     "build:frontend": "npm run build --workspace=frontend",
-    "lint": "npm run lint --workspaces",
+    "lint": "node scripts/lint.mjs both",
+    "lint:frontend": "node scripts/lint.mjs frontend",
+    "lint:backend": "node scripts/lint.mjs backend",
+    "lint:fix": "node scripts/lint-fix.mjs both",
+    "lint:fix:frontend": "node scripts/lint-fix.mjs frontend",
+    "lint:fix:backend": "node scripts/lint-fix.mjs backend",
+    "format": "prettier --write \"**/*.{js,jsx,json,md,scss,css}\"",
+    "format:frontend": "prettier --write \"frontend/**/*.{js,jsx,json,scss,css}\"",
+    "format:backend": "prettier --write \"backend/**/*.{js,json}\"",
+    "format:check": "prettier --check \"**/*.{js,jsx,json,md,scss,css}\"",
     "preview": "npm run preview --workspace=frontend"
   },
   "devDependencies": {
-    "eslint": "^9.39.1"
+    "@eslint/js": "^9.39.1",
+    "chalk": "^4.1.2",
+    "eslint": "^9.39.1",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "prettier": "^3.6.2"
   }
 }
