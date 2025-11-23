@@ -2,6 +2,7 @@ import ReactMarkdown from "react-markdown";
 import { Link } from "react-router-dom";
 import "./Resources.scss";
 import { kratomData } from "../utils/kratomData";
+import PageHeader from "../components/PageHeader";
 
 const Resources = () => {
   return (
@@ -16,12 +17,10 @@ const Resources = () => {
       </nav>
 
       <main className="resources-page-main">
-        <div className="resources-page-header">
-          <h2 className="resources-page-title">Resources</h2>
-          <p className="resources-page-subtitle">
-            Project documentation and information
-          </p>
-        </div>
+        <PageHeader
+          title="Resources"
+          subtitle="Project documentation and information"
+        />
 
         <div className="resources-page-content-card">
           <div className="resources-page-markdown">
