@@ -1,0 +1,267 @@
+@use "sass:map";
+@use "../styles/global.scss" as *;
+
+.drug-library-page {
+  min-height: 100vh;
+  background-color: color(gray, 50);
+
+  .drug-library-nav {
+    background-color: white;
+    box-shadow: map.get($shadows, sm);
+
+    .drug-library-nav-content {
+      max-width: 80rem;
+      margin: 0 auto;
+      padding: 0 space(4);
+      display: flex;
+      justify-content: space-between;
+      height: 4rem;
+      align-items: center;
+
+      @include respond-to(sm) {
+        padding: 0 space(6);
+      }
+
+      @include respond-to(lg) {
+        padding: 0 space(8);
+      }
+
+      .drug-library-nav-title {
+        font-size: map.get($font-sizes, 2xl);
+        font-weight: bold;
+        color: color(primary, 700);
+      }
+
+      .drug-library-nav-link {
+        color: color(gray, 600);
+        transition: color 0.2s;
+
+        &:hover {
+          color: color(gray, 900);
+        }
+      }
+    }
+  }
+
+  .drug-library-main {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: space(8) space(4);
+
+    @include respond-to(sm) {
+      padding: space(8) space(6);
+    }
+
+    @include respond-to(lg) {
+      padding: space(8) space(8);
+    }
+
+    .drug-library-grid {
+      display: grid;
+      gap: space(6);
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+
+      @include respond-to(md) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      @include respond-to(lg) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .drug-category-card {
+        background-color: white;
+        padding: space(6);
+        border-radius: map.get($radius, lg);
+        box-shadow: map.get($shadows, md);
+        transition: box-shadow 0.2s;
+
+        &:hover {
+          box-shadow: map.get($shadows, lg);
+        }
+
+        .drug-category-title {
+          font-size: map.get($font-sizes, xl);
+          font-weight: 600;
+          margin-bottom: space(3);
+
+          &.text-amber {
+            color: color(amber, 700);
+          }
+
+          &.text-red {
+            color: color(red, 700);
+          }
+
+          &.text-purple {
+            color: color(purple, 700);
+          }
+
+          &.text-orange {
+            color: color(orange, 700);
+          }
+
+          &.text-green {
+            color: color(green, 700);
+          }
+
+          &.text-blue {
+            color: color(blue, 700);
+          }
+
+          &.text-emerald {
+            color: color(emerald, 700);
+          }
+
+          &.text-indigo {
+            color: color(indigo, 700);
+          }
+
+          &.text-slate {
+            color: color(slate, 700);
+          }
+        }
+
+        .drug-list-container {
+          max-height: 16rem;
+          overflow-y: auto;
+          padding-right: space(2);
+
+          .drug-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            .drug-item {
+              display: flex;
+              align-items: center;
+              gap: space(2);
+              padding: space(2);
+              border-radius: map.get($radius, DEFAULT);
+              border: 1px solid;
+              margin-bottom: space(2);
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+
+              .drug-icon {
+                width: 1rem;
+                height: 1rem;
+                flex-shrink: 0;
+              }
+
+              .drug-name {
+                flex: 1;
+                font-size: map.get($font-sizes, sm);
+              }
+
+              .drug-danger-level {
+                font-size: map.get($font-sizes, xs);
+                font-weight: 600;
+                opacity: 0.7;
+              }
+
+              // Danger level styles
+              &.danger-extreme {
+                background-color: color(red, 50);
+                border-color: color(red, 200);
+
+                .drug-name,
+                .drug-danger-level {
+                  color: color(red, 700);
+                }
+
+                .drug-icon {
+                  color: color(red, 600);
+                }
+              }
+
+              &.danger-high {
+                background-color: color(orange, 50);
+                border-color: color(orange, 200);
+
+                .drug-name,
+                .drug-danger-level {
+                  color: color(orange, 700);
+                }
+
+                .drug-icon {
+                  color: color(orange, 600);
+                }
+              }
+
+              &.danger-moderate {
+                background-color: color(yellow, 50);
+                border-color: color(yellow, 400);
+
+                .drug-name,
+                .drug-danger-level {
+                  color: color(yellow, 800);
+                }
+
+                .drug-icon {
+                  color: color(yellow, 600);
+                }
+              }
+
+              &.danger-low {
+                background-color: color(green, 50);
+                border-color: color(green, 200);
+
+                .drug-name,
+                .drug-danger-level {
+                  color: color(green, 700);
+                }
+
+                .drug-icon {
+                  color: color(green, 600);
+                }
+              }
+            }
+          }
+        }
+
+        .drug-count {
+          margin-top: space(3);
+          font-size: map.get($font-sizes, xs);
+          color: color(gray, 500);
+        }
+      }
+    }
+
+    .interaction-warning {
+      margin-top: space(12);
+      background-color: color(yellow, 50);
+      border-left: 4px solid color(yellow, 400);
+      padding: space(6);
+      border-radius: map.get($radius, DEFAULT);
+
+      .interaction-warning-title {
+        font-size: map.get($font-sizes, lg);
+        font-weight: 600;
+        color: color(yellow, 900);
+        margin-bottom: space(2);
+      }
+
+      .interaction-warning-text {
+        color: color(yellow, 800);
+        margin-bottom: space(4);
+      }
+
+      .interaction-warning-button {
+        background-color: color(yellow, 600);
+        color: white;
+        padding: space(2) space(4);
+        border-radius: map.get($radius, DEFAULT);
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.2s;
+
+        &:hover {
+          background-color: color(yellow, 700);
+        }
+      }
+    }
+  }
+}

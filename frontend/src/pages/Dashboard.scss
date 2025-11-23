@@ -1,0 +1,174 @@
+@use "sass:map";
+@use "../styles/global.scss" as *;
+
+.dashboard-page {
+  min-height: 100vh;
+  background-color: color(gray, 50);
+
+  .dashboard-nav {
+    background-color: white;
+    box-shadow: map.get($shadows, sm);
+
+    .dashboard-nav-content {
+      max-width: 80rem;
+      margin: 0 auto;
+      padding: 0 space(4);
+      display: flex;
+      justify-content: space-between;
+      height: 4rem;
+      align-items: center;
+
+      @include respond-to(sm) {
+        padding: 0 space(6);
+      }
+
+      @include respond-to(lg) {
+        padding: 0 space(8);
+      }
+
+      .dashboard-nav-title {
+        font-size: map.get($font-sizes, 2xl);
+        font-weight: bold;
+        color: color(primary, 700);
+      }
+
+      .dashboard-nav-link {
+        color: color(gray, 600);
+        transition: color 0.2s;
+
+        &:hover {
+          color: color(gray, 900);
+        }
+      }
+    }
+  }
+
+  .dashboard-main {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: space(8) space(4);
+
+    @include respond-to(sm) {
+      padding: space(8) space(6);
+    }
+
+    @include respond-to(lg) {
+      padding: space(8) space(8);
+    }
+
+    .dashboard-grid {
+      display: grid;
+      gap: space(6);
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+
+      @include respond-to(md) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      @include respond-to(lg) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .dashboard-card {
+        background-color: white;
+        padding: space(6);
+        border-radius: map.get($radius, lg);
+        box-shadow: map.get($shadows, md);
+        border-left: 4px solid;
+
+        &.border-primary {
+          border-left-color: color(primary, 500);
+        }
+
+        &.border-green {
+          border-left-color: color(green, 500);
+        }
+
+        &.border-purple {
+          border-left-color: color(purple, 500);
+        }
+
+        &.border-orange {
+          border-left-color: color(orange, 500);
+        }
+
+        &.border-red {
+          border-left-color: color(red, 500);
+        }
+
+        &.border-blue {
+          border-left-color: color(blue, 500);
+        }
+
+        .dashboard-card-title {
+          font-size: map.get($font-sizes, lg);
+          font-weight: 600;
+          margin-bottom: space(2);
+          color: color(gray, 900);
+        }
+
+        .dashboard-card-description {
+          color: color(gray, 600);
+          font-size: map.get($font-sizes, sm);
+          margin-bottom: space(4);
+        }
+
+        .dashboard-card-status {
+          font-size: map.get($font-sizes, 3xl);
+          font-weight: bold;
+          color: color(primary, 600);
+        }
+
+        .dashboard-card-button {
+          padding: space(2) space(4);
+          border: none;
+          border-radius: map.get($radius, DEFAULT);
+          font-weight: 500;
+          cursor: pointer;
+          transition: background-color 0.2s;
+          color: white;
+
+          &.btn-green {
+            background-color: color(green, 600);
+
+            &:hover {
+              background-color: color(green, 700);
+            }
+          }
+
+          &.btn-purple {
+            background-color: color(purple, 600);
+
+            &:hover {
+              background-color: color(purple, 700);
+            }
+          }
+
+          &.btn-orange {
+            background-color: color(orange, 600);
+
+            &:hover {
+              background-color: color(orange, 700);
+            }
+          }
+
+          &.btn-red {
+            background-color: color(red, 600);
+
+            &:hover {
+              background-color: color(red, 700);
+            }
+          }
+
+          &.btn-blue {
+            background-color: color(blue, 600);
+
+            &:hover {
+              background-color: color(blue, 700);
+            }
+          }
+        }
+      }
+    }
+  }
+}

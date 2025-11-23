@@ -1,0 +1,80 @@
+@use "sass:map";
+@use "../styles/global.scss" as *;
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: space(4);
+  background-color: color(gray, 50);
+
+  .home-content {
+    max-width: 64rem;
+    width: 100%;
+    text-align: center;
+
+    .home-title {
+      font-size: map.get($font-sizes, 4xl);
+      font-weight: bold;
+      color: color(gray, 900);
+      margin-bottom: space(4);
+
+      @include respond-to(md) {
+        font-size: 3rem;
+      }
+    }
+
+    .home-subtitle {
+      font-size: map.get($font-sizes, xl);
+      color: color(gray, 600);
+      margin-bottom: space(8);
+    }
+
+    .home-features {
+      display: grid;
+      gap: space(6);
+      margin-bottom: space(12);
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+
+      @include respond-to(md) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .home-feature-card {
+        background-color: white;
+        padding: space(6);
+        border-radius: map.get($radius, lg);
+        box-shadow: map.get($shadows, md);
+
+        .home-feature-title {
+          font-size: map.get($font-sizes, 2xl);
+          font-weight: 600;
+          margin-bottom: space(3);
+          color: color(primary, 700);
+        }
+
+        .home-feature-description {
+          color: color(gray, 600);
+        }
+      }
+    }
+
+    .home-cta-button {
+      display: inline-block;
+      background-color: color(primary, 600);
+      color: white;
+      padding: space(3) space(8);
+      border-radius: map.get($radius, lg);
+      font-size: map.get($font-sizes, lg);
+      font-weight: 600;
+      transition: background-color 0.2s;
+      text-decoration: none;
+
+      &:hover {
+        background-color: color(primary, 700);
+      }
+    }
+  }
+}

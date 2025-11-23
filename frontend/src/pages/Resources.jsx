@@ -18,8 +18,8 @@ const Resources = () => {
 
       <main className="resources-page-main">
         <PageHeader
-          title="Resources"
-          subtitle="Project documentation and information"
+          title="Kratom and Safety Information"
+          subtitle="The current state of Kratom use, risks, and harm reduction strategies in the state of Florida."
         />
 
         <div className="resources-page-content-card">
