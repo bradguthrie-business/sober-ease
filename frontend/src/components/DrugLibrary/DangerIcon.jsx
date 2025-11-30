@@ -15,3 +15,19 @@ export const DangerIcon = ({ level }) => {
       return null;
   }
 };
+
+// eslint-disable-next-line react-refresh/only-export-components
+export const getDangerClassName = (level) => {
+  switch (level) {
+    case "EXTREME":
+      return "danger-extreme";
+    case "HIGH":
+      return "danger-high";
+    case "MODERATE":
+      return "danger-moderate";
+    case "LOW":
+      return "danger-low";
+    default:
+      return "";
+  }
+};

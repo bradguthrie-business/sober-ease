@@ -1,6 +1,6 @@
 import { X } from "lucide-react";
 import { DangerIcon } from "../../components/DrugLibrary/DangerIcon";
-import { getDangerClassName } from "../../components/DrugLibrary/DrugLibraryUtils";
+import { getDangerClassName } from "../../components/DrugLibrary/DangerIcon";
 import "./DrugModal.scss";
 
 export const DrugModal = ({ drug, onClose }) => {

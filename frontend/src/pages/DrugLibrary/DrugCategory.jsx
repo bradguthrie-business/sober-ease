@@ -1,7 +1,9 @@
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
-import { DangerIcon } from "../../components/DrugLibrary/DangerIcon";
-import { getDangerClassName } from "../../components/DrugLibrary/DrugLibraryUtils";
+import {
+  DangerIcon,
+  getDangerClassName,
+} from "../../components/DrugLibrary/DangerIcon";
 import "./DrugCategory.scss";
 
 const dangerOrder = ["EXTREME", "HIGH", "MODERATE", "LOW"];
