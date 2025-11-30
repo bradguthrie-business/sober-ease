@@ -38,6 +38,11 @@
         box-shadow: map.get($shadows, md);
         border-left: 4px solid;
 
+        &:hover {
+          transform: translateY(-1px);
+          background-color: color(gray, 100);
+        }
+
         &.border-primary {
           border-left-color: color(primary, 500);
         }
