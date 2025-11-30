@@ -1,8 +1,8 @@
 import { format } from "date-fns";
 import ReactMarkdown from "react-markdown";
 import { Link } from "react-router-dom";
-import PageHeader from "../components/PageHeader";
-import { resourceData } from "../utils/resourceData";
+import PageHeader from "../../components/PageHeader";
+import { resourceData } from "../../utils/resourceData";
 import "./Resources.scss";
 
 const Resources = () => {
