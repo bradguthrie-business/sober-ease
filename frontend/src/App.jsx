@@ -4,6 +4,10 @@ import DrugLibrary from "./pages/DrugLibrary/DrugLibrary";
 import Home from "./pages/Home/Home";
 import Resources from "./pages/Resources/Resources";
 import GlobalNav from "./components/GlobalNav/GlobalNav";
+import { AuthProvider } from "./auth/AuthProvider";
+import ProtectedRoute from "./auth/ProtectedRoute";
+import Login from "./pages/Login/Login";
+import Logout from "./pages/Logout/Logout";
 
 function App() {
   // Vite exposes the configured `base` as import.meta.env.BASE_URL
@@ -13,13 +17,41 @@ function App() {
 
   return (
     <BrowserRouter basename={basename}>
-      <GlobalNav />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/drug-library" element={<DrugLibrary />} />
-        <Route path="/resources" element={<Resources />} />
-      </Routes>
+      <AuthProvider>
+        <GlobalNav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/logout" element={<Logout />} />
+
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/drug-library"
+            element={
+              <ProtectedRoute>
+                <DrugLibrary />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/resources"
+            element={
+              <ProtectedRoute>
+                <Resources />
+              </ProtectedRoute>
+            }
+          />
+        </Routes>
+      </AuthProvider>
     </BrowserRouter>
   );
 }

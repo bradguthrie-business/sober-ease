@@ -40,7 +40,7 @@ export default function Home() {
           </div>
         </div>
 
-        <Link to="/dashboard" className="home-cta-button">
+        <Link to="/login" className="home-cta-button">
           Get Started
         </Link>
       </div>
