@@ -20,6 +20,42 @@
       font-size: map-get($font-sizes, xl);
       font-weight: 600;
       margin-bottom: space(3);
+
+      &.text-amber {
+        color: color(amber, 700);
+      }
+
+      &.text-red {
+        color: color(red, 700);
+      }
+
+      &.text-purple {
+        color: color(purple, 700);
+      }
+
+      &.text-orange {
+        color: color(orange, 700);
+      }
+
+      &.text-green {
+        color: color(green, 700);
+      }
+
+      &.text-blue {
+        color: color(blue, 700);
+      }
+
+      &.text-emerald {
+        color: color(emerald, 700);
+      }
+
+      &.text-indigo {
+        color: color(indigo, 700);
+      }
+
+      &.text-slate {
+        color: color(slate, 700);
+      }
     }
 
     .drug-category-caret {
