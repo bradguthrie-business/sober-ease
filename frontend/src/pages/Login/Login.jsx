@@ -59,7 +59,7 @@ export default function Login() {
         <form onSubmit={handleSignIn} className="login-form">
           <input
             type="email"
-            placeholder="Email"
+            placeholder="Email address"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
