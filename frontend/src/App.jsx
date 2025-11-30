@@ -5,8 +5,13 @@ import Home from "./pages/Home/Home";
 import Resources from "./pages/Resources/Resources";
 
 function App() {
+  // Vite exposes the configured `base` as import.meta.env.BASE_URL
+  // Use it as the BrowserRouter basename so routes work when site is served
+  // from a subpath (like GitHub Pages) and also work locally.
+  const basename = import.meta.env.BASE_URL || "/";
+
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/dashboard" element={<Dashboard />} />
