@@ -8,6 +8,18 @@ export const danger = {
 };
 
 export const alcohol = [
+  {
+    name: "Everclear",
+    danger: danger.EXTREME,
+    description:
+      "Everclear is a brand of grain alcohol that is extremely high in alcohol content, often around 95% ABV (190 proof). It is highly potent and can be very dangerous if consumed irresponsibly.",
+    effects:
+      "Extreme intoxication, rapid impairment, risk of alcohol poisoning.",
+    risks:
+      "High risk of alcohol poisoning, respiratory depression, unconsciousness, death.",
+    harmReduction:
+      "Use extreme caution, dilute before consumption, avoid binge drinking, never drink alone.",
+  },
   { name: "Liquor/Spirits", danger: danger.HIGH },
   {
     name: "Malt Liquor",
@@ -22,9 +34,47 @@ export const alcohol = [
     harmReduction:
       "Pace yourself, eat before drinking, avoid mixing with other depressants (like benzodiazepines or opioids), and never drive under the influence. Know your limits and stay hydrated.",
   },
-  { name: "Wine", danger: danger.MODERATE },
-  { name: "Beer", danger: danger.MODERATE },
-  { name: "Hard Seltzer", danger: danger.MODERATE },
+  {
+    name: "Wine",
+    danger: danger.MODERATE,
+    description:
+      "Wine is an alcoholic beverage made from fermented grapes or other fruits. It typically contains 9-16% alcohol by volume (ABV).",
+    commonNames:
+      "Red, White, Rosé, Champagne, Merlot, Chardonnay, Pinot Noir, Moscato",
+    effects:
+      "Relaxation, mild euphoria, lowered inhibitions, impaired coordination, drowsiness. High doses can cause intoxication, vomiting, or blackouts.",
+    risks:
+      "Addiction, liver damage, alcohol poisoning, risky behaviors, dehydration, and withdrawal symptoms. Mixing with other depressants increases risk.",
+    harmReduction:
+      "Pace yourself, eat before drinking, avoid mixing with other depressants, and never drive under the influence. Stay hydrated and know your limits.",
+  },
+  {
+    name: "Beer",
+    danger: danger.MODERATE,
+    description:
+      "Beer is a fermented beverage made from grains such as barley, wheat, or corn, and typically contains 4-8% alcohol by volume (ABV).",
+    commonNames: "Lager, Ale, Stout, IPA, Pilsner, Porter, Brew, Suds",
+    effects:
+      "Relaxation, mild euphoria, lowered inhibitions, impaired coordination, drowsiness. High doses can cause intoxication, vomiting, or blackouts.",
+    risks:
+      "Addiction, liver damage, alcohol poisoning, risky behaviors, dehydration, and withdrawal symptoms. Mixing with other depressants increases risk.",
+    harmReduction:
+      "Pace yourself, eat before drinking, avoid mixing with other depressants, and never drive under the influence. Stay hydrated and know your limits.",
+  },
+  {
+    name: "Hard Seltzer",
+    danger: danger.MODERATE,
+    description:
+      "Hard seltzer is a carbonated alcoholic beverage made with sparkling water, alcohol (usually from fermented cane sugar), and flavorings. It typically contains 4-7% alcohol by volume (ABV).",
+    commonNames:
+      "Spiked Seltzer, White Claw, Truly, Bon & Viv, Hard Sparkling Water",
+    effects:
+      "Relaxation, mild euphoria, lowered inhibitions, impaired coordination, drowsiness. High doses can cause intoxication, vomiting, or blackouts.",
+    risks:
+      "Addiction, liver damage, alcohol poisoning, risky behaviors, dehydration, and withdrawal symptoms. Mixing with other depressants increases risk.",
+    harmReduction:
+      "Pace yourself, eat before drinking, avoid mixing with other depressants, and never drive under the influence. Stay hydrated and know your limits.",
+  },
 ];
 
 export const opioids = [

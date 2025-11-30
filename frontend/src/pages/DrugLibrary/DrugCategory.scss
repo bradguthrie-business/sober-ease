@@ -1,0 +1,87 @@
+@use "../../styles/global.scss" as *;
+
+.drug-category-card {
+  background-color: white;
+  padding: space(6);
+  border-radius: map-get($radius, lg);
+  box-shadow: map-get($shadows, md);
+  transition: box-shadow 0.2s;
+
+  &:hover {
+    box-shadow: map-get($shadows, lg);
+  }
+
+  .drug-category-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .drug-category-title {
+      font-size: map-get($font-sizes, xl);
+      font-weight: 600;
+      margin-bottom: space(3);
+    }
+
+    .drug-category-caret {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      margin-left: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .drug-list-container {
+    max-height: 16rem;
+    overflow-y: auto;
+    padding-right: space(2);
+
+    .drug-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      .drug-item {
+        display: flex;
+        align-items: center;
+        gap: space(2);
+        padding: space(2);
+        border-radius: map-get($radius, DEFAULT);
+        border: 1px solid;
+        margin-bottom: space(2);
+        cursor: pointer;
+        transition: all 0.2s;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .drug-icon {
+          width: 1rem;
+          height: 1rem;
+          flex-shrink: 0;
+        }
+
+        .drug-name {
+          flex: 1;
+          font-size: map-get($font-sizes, sm);
+        }
+
+        .drug-danger-level {
+          font-size: map-get($font-sizes, xs);
+          font-weight: 600;
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  .drug-count {
+    margin-top: space(3);
+    font-size: map-get($font-sizes, xs);
+    color: color(gray, 500);
+  }
+}

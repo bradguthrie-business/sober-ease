@@ -255,40 +255,6 @@
         }
       }
     }
-
-    .interaction-warning {
-      margin-top: space(12);
-      background-color: color(yellow, 50);
-      border-left: 4px solid color(yellow, 400);
-      padding: space(6);
-      border-radius: map.get($radius, DEFAULT);
-
-      .interaction-warning-title {
-        font-size: map.get($font-sizes, lg);
-        font-weight: 600;
-        color: color(yellow, 900);
-        margin-bottom: space(2);
-      }
-
-      .interaction-warning-text {
-        color: color(yellow, 800);
-        margin-bottom: space(4);
-      }
-
-      .interaction-warning-button {
-        background-color: color(yellow, 600);
-        color: white;
-        padding: space(2) space(4);
-        border-radius: map.get($radius, DEFAULT);
-        border: none;
-        cursor: pointer;
-        transition: background-color 0.2s;
-
-        &:hover {
-          background-color: color(yellow, 700);
-        }
-      }
-    }
   }
 
   // Drug Modal Styles
