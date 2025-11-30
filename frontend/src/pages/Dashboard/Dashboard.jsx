@@ -50,7 +50,7 @@ export default function Dashboard() {
           <div className="dashboard-card border-red">
             <h3 className="dashboard-card-title">Drug Library</h3>
             <p className="dashboard-card-description">
-              Harm reduction & interaction info
+              Harm reduction & interaction info.
             </p>
             <Link to="/drug-library">
               <button className="dashboard-card-button btn-red">
@@ -62,7 +62,7 @@ export default function Dashboard() {
           <div className="dashboard-card border-blue">
             <h3 className="dashboard-card-title">Resources</h3>
             <p className="dashboard-card-description">
-              Crisis support & recovery tools
+              Crisis support & recovery tools.
             </p>
             <Link to="/resources">
               <button className="dashboard-card-button btn-blue">

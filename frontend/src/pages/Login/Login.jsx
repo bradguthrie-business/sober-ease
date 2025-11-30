@@ -15,6 +15,7 @@ export default function Login() {
     try {
       await signInWithGoogle();
       navigate("/dashboard");
+      toast.success("Successfully signed in!");
     } catch (error) {
       console.error(error);
       const errorMessage = "Google sign-in failed.";
@@ -27,6 +28,7 @@ export default function Login() {
     try {
       await signInWithEmail(email, password);
       navigate("/dashboard");
+      toast.success("Successfully signed in!");
     } catch (error) {
       console.error(error);
       const errorMessage = "Invalid credentials!";
@@ -39,6 +41,7 @@ export default function Login() {
     try {
       await signUpWithEmail(email, password);
       navigate("/dashboard");
+      toast.success("Successfully signed up!");
     } catch (error) {
       console.error(error);
       const errorMessage = "Sign up failed.";

@@ -7,7 +7,6 @@ import GlobalNav from "./components/GlobalNav/GlobalNav";
 import { AuthProvider } from "./auth/AuthProvider";
 import ProtectedRoute from "./auth/ProtectedRoute";
 import Login from "./pages/Login/Login";
-import Logout from "./pages/Logout/Logout";
 
 function App() {
   // Vite exposes the configured `base` as import.meta.env.BASE_URL
@@ -22,7 +21,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/logout" element={<Logout />} />
 
           <Route
             path="/dashboard"
