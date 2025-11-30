@@ -1,0 +1,37 @@
+@use "../../styles/global.scss" as *;
+
+.global-nav {
+  background-color: white;
+  box-shadow: map-get($shadows, sm);
+
+  .global-nav-content {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 space(4);
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+    align-items: center;
+
+    .global-nav-title {
+      font-size: map-get($font-sizes, 2xl);
+      font-weight: bold;
+      color: color(primary, 700);
+    }
+
+    .global-nav-links {
+      display: flex;
+      gap: space(4);
+
+      .global-nav-link {
+        color: color(gray, 600);
+        text-decoration: none;
+        transition: color 0.15s;
+
+        &:hover {
+          color: color(gray, 900);
+        }
+      }
+    }
+  }
+}

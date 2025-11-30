@@ -3,6 +3,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import DrugLibrary from "./pages/DrugLibrary/DrugLibrary";
 import Home from "./pages/Home/Home";
 import Resources from "./pages/Resources/Resources";
+import GlobalNav from "./components/GlobalNav/GlobalNav";
 
 function App() {
   // Vite exposes the configured `base` as import.meta.env.BASE_URL
@@ -12,6 +13,7 @@ function App() {
 
   return (
     <BrowserRouter basename={basename}>
+      <GlobalNav />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/dashboard" element={<Dashboard />} />

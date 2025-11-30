@@ -5,44 +5,6 @@
   min-height: 100vh;
   background-color: color(gray, 50);
 
-  .dashboard-nav {
-    background-color: white;
-    box-shadow: map.get($shadows, sm);
-
-    .dashboard-nav-content {
-      max-width: 80rem;
-      margin: 0 auto;
-      padding: 0 space(4);
-      display: flex;
-      justify-content: space-between;
-      height: 4rem;
-      align-items: center;
-
-      @include respond-to(sm) {
-        padding: 0 space(6);
-      }
-
-      @include respond-to(lg) {
-        padding: 0 space(8);
-      }
-
-      .dashboard-nav-title {
-        font-size: map.get($font-sizes, 2xl);
-        font-weight: bold;
-        color: color(primary, 700);
-      }
-
-      .dashboard-nav-link {
-        color: color(gray, 600);
-        transition: color 0.2s;
-
-        &:hover {
-          color: color(gray, 900);
-        }
-      }
-    }
-  }
-
   .dashboard-main {
     max-width: 80rem;
     margin: 0 auto;

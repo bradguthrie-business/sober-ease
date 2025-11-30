@@ -1,19 +1,10 @@
 import { Link } from "react-router-dom";
-import PageHeader from "../../components/PageHeader";
+import PageHeader from "../../components/PageHeader/PageHeader";
 import "./Dashboard.scss";
 
 export default function Dashboard() {
   return (
     <div className="dashboard-page">
-      <nav className="dashboard-nav">
-        <div className="dashboard-nav-content">
-          <h1 className="dashboard-nav-title">SoberEase</h1>
-          <Link to="/" className="dashboard-nav-link">
-            Home
-          </Link>
-        </div>
-      </nav>
-
       <main className="dashboard-main">
         <PageHeader title="Dashboard" subtitle="Track your recovery journey" />
 

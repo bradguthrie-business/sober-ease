@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import PageHeader from "../../components/PageHeader";
+import PageHeader from "../../components/PageHeader/PageHeader";
 import {
   alcohol,
   benzodiazepines,
@@ -30,15 +30,6 @@ const DrugLibrary = () => {
 
   return (
     <div className="drug-library-page">
-      <nav className="drug-library-nav">
-        <div className="drug-library-nav-content">
-          <h1 className="drug-library-nav-title">SoberEase</h1>
-          <Link to="/dashboard" className="drug-library-nav-link">
-            Dashboard
-          </Link>
-        </div>
-      </nav>
-
       <main className="drug-library-main">
         <PageHeader
           title="Drug Library"
