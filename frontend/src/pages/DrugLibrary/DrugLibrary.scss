@@ -1,5 +1,5 @@
 @use "sass:map";
-@use "../styles/global.scss" as *;
+@use "../../styles/global.scss" as *;
 
 .drug-library-page {
   min-height: 100vh;
@@ -140,6 +140,8 @@
               border-radius: map.get($radius, DEFAULT);
               border: 1px solid;
               margin-bottom: space(2);
+              cursor: pointer;
+              transition: all 0.2s;
 
               &:last-child {
                 margin-bottom: 0;
@@ -167,6 +169,12 @@
                 background-color: color(red, 50);
                 border-color: color(red, 200);
 
+                &:hover {
+                  background-color: color(red, 100);
+                  transform: translateY(-1px);
+                  box-shadow: map.get($shadows, sm);
+                }
+
                 .drug-name,
                 .drug-danger-level {
                   color: color(red, 700);
@@ -180,6 +188,12 @@
               &.danger-high {
                 background-color: color(orange, 50);
                 border-color: color(orange, 200);
+
+                &:hover {
+                  background-color: color(orange, 100);
+                  transform: translateY(-1px);
+                  box-shadow: map.get($shadows, sm);
+                }
 
                 .drug-name,
                 .drug-danger-level {
@@ -195,6 +209,12 @@
                 background-color: color(yellow, 50);
                 border-color: color(yellow, 400);
 
+                &:hover {
+                  background-color: color(yellow, 100);
+                  transform: translateY(-1px);
+                  box-shadow: map.get($shadows, sm);
+                }
+
                 .drug-name,
                 .drug-danger-level {
                   color: color(yellow, 800);
@@ -208,6 +228,12 @@
               &.danger-low {
                 background-color: color(green, 50);
                 border-color: color(green, 200);
+
+                &:hover {
+                  background-color: color(green, 100);
+                  transform: translateY(-1px);
+                  box-shadow: map.get($shadows, sm);
+                }
 
                 .drug-name,
                 .drug-danger-level {
@@ -260,6 +286,130 @@
 
         &:hover {
           background-color: color(yellow, 700);
+        }
+      }
+    }
+  }
+
+  // Drug Modal Styles
+  .drug-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: space(4);
+
+    .drug-modal-content {
+      background-color: white;
+      border-radius: map.get($radius, xl);
+      max-width: 42rem;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: map.get($shadows, xl);
+      position: relative;
+
+      .drug-modal-close {
+        position: absolute;
+        top: space(4);
+        right: space(4);
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: color(gray, 500);
+        padding: space(2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: map.get($radius, DEFAULT);
+        transition: all 0.2s;
+
+        &:hover {
+          background-color: color(gray, 100);
+          color: color(gray, 900);
+        }
+
+        svg {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+
+      .drug-modal-header {
+        padding: space(6);
+        border-bottom: 1px solid color(gray, 200);
+
+        .drug-modal-title {
+          font-size: map.get($font-sizes, 3xl);
+          font-weight: bold;
+          color: color(gray, 900);
+          margin-bottom: space(2);
+          padding-right: space(10);
+        }
+
+        .drug-modal-danger {
+          display: inline-flex;
+          align-items: center;
+          gap: space(2);
+          padding: space(2) space(3);
+          border-radius: map.get($radius, DEFAULT);
+          font-size: map.get($font-sizes, sm);
+          font-weight: 600;
+
+          svg {
+            width: 1rem;
+            height: 1rem;
+          }
+
+          &.danger-extreme {
+            background-color: color(red, 100);
+            color: color(red, 700);
+          }
+
+          &.danger-high {
+            background-color: color(orange, 100);
+            color: color(orange, 700);
+          }
+
+          &.danger-moderate {
+            background-color: color(yellow, 100);
+            color: color(yellow, 800);
+          }
+
+          &.danger-low {
+            background-color: color(green, 100);
+            color: color(green, 700);
+          }
+        }
+      }
+
+      .drug-modal-body {
+        padding: space(6);
+
+        .drug-modal-section {
+          margin-bottom: space(6);
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          h3 {
+            font-size: map.get($font-sizes, lg);
+            font-weight: 600;
+            color: color(gray, 900);
+            margin-bottom: space(2);
+          }
+
+          p {
+            color: color(gray, 600);
+            line-height: 1.6;
+          }
         }
       }
     }

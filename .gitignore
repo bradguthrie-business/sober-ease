@@ -26,3 +26,4 @@ dist-ssr
 # temporary ignores
 *.png
 *.old
+# *todo.md

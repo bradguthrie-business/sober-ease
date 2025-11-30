@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Dashboard from "./pages/Dashboard";
-import DrugLibrary from "./pages/DrugLibrary";
-import Home from "./pages/Home";
-import Resources from "./pages/Resources";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import DrugLibrary from "./pages/DrugLibrary/DrugLibrary";
+import Home from "./pages/Home/Home";
+import Resources from "./pages/Resources/Resources";
 
 function App() {
   return (
