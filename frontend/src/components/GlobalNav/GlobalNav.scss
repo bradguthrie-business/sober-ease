@@ -19,18 +19,22 @@
       color: color(primary, 700);
     }
 
+    .global-nav-auth {
+      gap: 20px;
+      display: flex;
+      align-items: center;
+    }
+
     .global-nav-links {
       display: flex;
       gap: space(4);
 
-      .global-nav-link {
-        color: color(gray, 600);
-        text-decoration: none;
-        transition: color 0.15s;
-
-        &:hover {
-          color: color(gray, 900);
-        }
+      .global-nav-button {
+        padding: 8px 12px;
+        background: #4285f4;
+        color: white;
+        border: none;
+        border-radius: 4px;
       }
     }
   }

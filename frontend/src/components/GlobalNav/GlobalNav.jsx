@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 import "./GlobalNav.scss";
+import { useAuth } from "../../auth/AuthProvider";
 
 const GlobalNav = () => {
+  const auth = useAuth();
+  const user = auth?.user;
+
   return (
     <nav className="global-nav">
       <div className="global-nav-content">
@@ -19,6 +23,22 @@ const GlobalNav = () => {
           <Link to="/resources" className="global-nav-link">
             Resources
           </Link>
+        </div>
+
+        <div className="global-nav-auth">
+          {user ? (
+            <>
+              <span className="global-nav-user">{user?.displayName}</span>
+
+              <Link to="/logout" className="global-nav-link">
+                <button className="google">Logout</button>
+              </Link>
+            </>
+          ) : (
+            <Link to="/login" className="global-nav-link">
+              <button className="google">Login</button>
+            </Link>
+          )}
         </div>
       </div>
     </nav>

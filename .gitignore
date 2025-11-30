@@ -27,3 +27,5 @@ dist-ssr
 *.png
 *.old
 # *todo.md
+
+/frontend/.env
