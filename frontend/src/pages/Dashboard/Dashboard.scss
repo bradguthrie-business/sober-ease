@@ -128,6 +128,11 @@
           transition: background-color 0.2s;
           color: white;
 
+          &.disabled {
+            background-color: color(gray, 300) !important;
+            cursor: not-allowed !important;
+          }
+
           &.btn-green {
             background-color: color(green, 600);
 

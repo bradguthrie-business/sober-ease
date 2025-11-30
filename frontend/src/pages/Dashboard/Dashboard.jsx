@@ -20,28 +20,28 @@ export default function Dashboard() {
         <div className="dashboard-grid">
           <div className="dashboard-card border-primary">
             <h3 className="dashboard-card-title">Sobriety Counters</h3>
-            <p className="dashboard-card-description">
-              Track days clean for each substance
-            </p>
-            <div className="dashboard-card-status">Coming Soon</div>
+            <p className="dashboard-card-description">Track milestones.</p>
+            <button className="dashboard-card-button btn-primary disabled">
+              New Entry
+            </button>
           </div>
 
           <div className="dashboard-card border-green">
             <h3 className="dashboard-card-title">Daily Journal</h3>
             <p className="dashboard-card-description">
-              Record your thoughts and feelings
+              Record your thoughts and feelings.
             </p>
-            <button className="dashboard-card-button btn-green">
-              New Entry
+            <button className="dashboard-card-button btn-green disabled">
+              Journal Thoughts
             </button>
           </div>
 
           <div className="dashboard-card border-purple">
             <h3 className="dashboard-card-title">Community Forums</h3>
             <p className="dashboard-card-description">
-              Connect with others in recovery
+              Connect with others in recovery.
             </p>
-            <button className="dashboard-card-button btn-purple">
+            <button className="dashboard-card-button btn-purple disabled">
               Browse Forums
             </button>
           </div>
@@ -49,9 +49,9 @@ export default function Dashboard() {
           <div className="dashboard-card border-orange">
             <h3 className="dashboard-card-title">Drug Encounters</h3>
             <p className="dashboard-card-description">
-              Document experiences for harm reduction
+              Document experiences for harm reduction.
             </p>
-            <button className="dashboard-card-button btn-orange">
+            <button className="dashboard-card-button btn-orange disabled">
               Log Encounter
             </button>
           </div>
