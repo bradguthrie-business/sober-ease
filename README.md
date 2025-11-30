@@ -31,4 +31,4 @@ cd frontend
 npm run dev
 ```
 
-Open the site at `http://localhost:5173` (Vite default), or, see its deployment on its Github Pages link at [https://bradguthrie-business.github.io/brads-sample-vite-app/](https://bradguthrie-business.github.io/brads-sample-vite-app/)
+Open the site at `http://localhost:5173` (Vite default), or, see its deployment on its Github Pages link at [https://bradguthrie-business.github.io/sober-ease/](https://bradguthrie-business.github.io/sober-ease/)
