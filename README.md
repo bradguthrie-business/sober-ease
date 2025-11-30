@@ -1,109 +1,34 @@
 # SoberEase
 
-A full-stack sobriety and harm reduction application.
+A small monorepo for SoberEase — a sobriety and harm-reduction web app.
+This repository contains a React + Vite frontend and a small backend folder.
 
-## Core Features
+**Quick overview**
 
-1. **Sobriety Tracking**: Track days clean for multiple substances
-2. **Daily Journaling**: Document thoughts, triggers, and progress
-3. **Community Forums**: Substance-specific peer support groups
-4. **Drug Encounters**: Harm reduction journaling for therapeutic use
-5. **Drug Library**: Evidence-based interaction and safety information
+- Frontend: `./frontend` — React + Vite app (client-side routing).
+- Backend: `./backend` — minimal Node project (see its `package.json` for scripts).
 
-## Project Structure
+## Development
 
-```
-sober-ease/
-├── frontend/          # React + Vite + TailwindCSS web app
-│   ├── src/
-│   │   ├── pages/     # Route pages
-│   │   ├── components/# Reusable components
-│   │   ├── hooks/     # Custom React hooks
-│   │   ├── utils/     # Helper functions
-│   │   └── layouts/   # Layout components
-│   └── public/        # Static assets
-│
-├── backend/           # AWS Lambda Node.js API
-│   ├── src/           # Lambda handlers
-│   └── tests/         # Backend tests
-│
-└── package.json       # Root workspace config
-```
+Prereqs: Node.js 18+ and npm.
 
-## Tech Stack
-
-### Frontend
-
-- **React 19** - UI framework
-- **Vite** - Build tool
-- **React Router** - Client-side routing
-- **TailwindCSS** - Utility-first CSS
-
-### Backend (Coming Soon)
-
-- **AWS Lambda** - Serverless functions
-- **API Gateway** - REST API
-- **DynamoDB** - NoSQL database
-- **Cognito** - Authentication
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js 18+
-- npm
-
-### Installation
+1. Install dependencies
 
 ```bash
-# Install all dependencies (frontend + backend)
+# from repo root
+cd frontend
+npm install
+
+# (optional) backend
+cd ../backend
 npm install
 ```
 
-### Development
+2. Run the frontend dev server
 
 ```bash
-# Run frontend dev server
+cd frontend
 npm run dev
-
-# Or explicitly
-npm run dev:frontend
 ```
 
-The app will be available at `http://localhost:5173`
-
-### Building
-
-```bash
-# Build frontend for production
-npm run build
-```
-
-## Features
-
-### Phase 1 (MVP)
-
-- [x] Monorepo structure
-- [x] React + Vite setup
-- [x] TailwindCSS styling
-- [x] React Router
-- [x] Home page
-- [x] Dashboard page
-- [ ] Sobriety counter
-- [ ] Daily journaling
-- [ ] Community forums
-- [ ] Drug library
-- [ ] Harm reduction resources
-
-### Phase 2 (Backend Integration)
-
-- [ ] AWS Lambda API
-- [ ] DynamoDB schema
-- [ ] User authentication
-- [ ] CRUD operations
-
-### Phase 3 (Mobile)
-
-- [ ] React Native app
-- [ ] Shared API
-- [ ] Push notifications
+Open the site at `http://localhost:5173` (Vite default), or, see its deployment on its Github Pages link at [https://bradguthrie-business.github.io/brads-sample-vite-app/](https://bradguthrie-business.github.io/brads-sample-vite-app/)
