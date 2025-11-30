@@ -7,6 +7,10 @@
   box-shadow: map-get($shadows, md);
   transition: box-shadow 0.2s;
 
+  &.closed {
+    height: 6rem;
+  }
+
   &:hover {
     box-shadow: map-get($shadows, lg);
   }
@@ -71,8 +75,8 @@
   }
 
   .drug-list-container {
-    max-height: 16rem;
-    overflow-y: auto;
+    max-height: 16rem !important;
+    overflow-y: auto !important;
     padding-right: space(2);
 
     .drug-list {

@@ -16,7 +16,7 @@ export const DrugCategory = ({ title, drugs, colorClass, onDrugClick }) => {
     return aIdx - bIdx;
   });
   return (
-    <div className="drug-category-card">
+    <div className={`drug-category-card ${open ? "open" : "closed"}`}>
       <div className="drug-category-header">
         <h3 className={`drug-category-title ${colorClass}`}>{title}</h3>
         <button
