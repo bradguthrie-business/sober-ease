@@ -35,6 +35,9 @@ const DrugLibrary = () => {
           title="Drug Library"
           subtitle="Evidence-based harm reduction information for common substances."
         />
+
+        <DrugInteraction />
+
         <div className="drug-library-grid">
           <DrugCategory
             title="Alcohol"
@@ -91,7 +94,6 @@ const DrugLibrary = () => {
             onDrugClick={handleSubstanceClick}
           />
         </div>
-        <DrugInteraction />
       </main>
       <DrugModal drug={selectedSubstance} onClose={handleCloseModal} />
     </div>

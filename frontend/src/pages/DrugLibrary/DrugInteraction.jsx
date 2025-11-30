@@ -7,9 +7,9 @@ export const DrugInteraction = () => {
       <h3 className="interaction-warning-title">Drug Interaction Chart</h3>
       <p className="interaction-warning-text">
         Understanding drug interactions is critical for harm reduction. Some
-        combinations can be dangerous or deadly.
+        combinations can be dangerous or deadly. This feature is coming soon.
       </p>
-      <button className="interaction-warning-button">
+      <button className="interaction-warning-button disabled">
         View Interaction Matrix
       </button>
     </div>

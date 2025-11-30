@@ -2,7 +2,8 @@
 @use "../../styles/global.scss" as *;
 
 .interaction-warning {
-  margin-top: space(12);
+  margin-top: space(6);
+  margin-bottom: space(6);
   background-color: color(yellow, 50);
   border-left: 4px solid color(yellow, 400);
   padding: space(6);
@@ -28,6 +29,11 @@
     border: none;
     cursor: pointer;
     transition: background-color 0.2s;
+
+    &.disabled {
+      background-color: color(gray, 300) !important;
+      cursor: not-allowed !important;
+    }
 
     &:hover {
       background-color: color(yellow, 700);
