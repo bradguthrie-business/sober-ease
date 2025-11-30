@@ -5,7 +5,7 @@
   "type": "module",
   "homepage": "https://bradguthrie-business.github.io/sober-ease/",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --open",
     "build": "vite build",
     "preview": "vite preview"
   },
