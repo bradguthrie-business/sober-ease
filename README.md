@@ -3,6 +3,10 @@
 A small monorepo for SoberEase — a sobriety and harm-reduction web app.
 This repository contains a React + Vite frontend and a small backend folder.
 
+This application has authentication setup with `firebase` - you can create an account with your own email, or, use your Google account.
+
+### Application URL: https://bradguthrie-business.github.io/sober-ease/
+
 **Quick overview**
 
 - Frontend: `./frontend` — React + Vite app (client-side routing).
@@ -31,4 +35,4 @@ cd frontend
 npm run dev
 ```
 
-Open the site at `http://localhost:5173` (Vite default), or, see its deployment on its Github Pages link at [https://bradguthrie-business.github.io/sober-ease/](https://bradguthrie-business.github.io/sober-ease/)
+Open the site at `http://localhost:5173` (Vite default)!
