@@ -25,14 +25,11 @@ export default function Login() {
   const handleSignIn = async (e) => {
     e.preventDefault();
     try {
-      const res = await signInWithEmail(email, password);
-      console.log(res);
-      const resRes = await res.json();
-      console.log(resRes);
+      await signInWithEmail(email, password);
       navigate("/dashboard");
     } catch (error) {
       console.error(error);
-      const errorMessage = "Invalid credentails!";
+      const errorMessage = "Invalid credentials!";
       toast.error(errorMessage);
     }
   };
